@@ -1,15 +1,36 @@
 ---
+import Layout from '../layouts/default.astro';
+import { wpquery } from '../data/wordpress';
+
+const data = await wpquery({
+  query: `
+    query LoadAllPostsExcerpts {
+      posts {
+        nodes {
+          title
+          slug
+          excerpt
+        }
+      }
+    }
+  `,
+});
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Food Truth">
+  <h1>Posts</h1>
+
+  {
+    data.posts.nodes.map((post: any) => {
+      return (
+        <article class="post-preview">
+          <h2>
+            <a href={`/blog/${post.slug}`}>{post.title}</a>
+          </h2>
+          <Fragment set:html={post.excerpt} />
+          <a href={`/blog/${post.slug}`}>read post &rarr;</a>
+        </article>
+      );
+    })
+  }
+</Layout>

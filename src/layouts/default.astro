@@ -1,0 +1,99 @@
+---
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <a href="/" rel="home">
+        <span role="img" aria-label="Cheese">🧀</span>
+        Food Truth
+      </a>
+      <nav>
+        <a href="/">Blog</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    color: #484844;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+      sans-serif;
+    font-size: 18px;
+    line-height: 1.45;
+  }
+  body {
+    margin: 0;
+  }
+  h1,
+  h2 {
+    color: #383833;
+    line-height: 1.1;
+  }
+  img {
+    width: 100%;
+  }
+
+  .post-preview h2 {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+
+  .post-preview h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .byline {
+    color: #575754;
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+</style>
+
+<style>
+  header {
+    align-items: center;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 5%;
+  }
+  a[rel='home'] {
+    align-items: center;
+    color: #383833;
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+  a[rel='home'] > span[role='img'] {
+    font-size: 2.5rem;
+  }
+  nav a {
+    color: #383833;
+    text-decoration: none;
+  }
+  main {
+    margin: 3rem auto;
+    width: min(54ch, 90%);
+  }
+</style>

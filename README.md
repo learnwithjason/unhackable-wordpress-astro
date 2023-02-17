@@ -1,46 +1,30 @@
-# Astro Starter Kit: Minimal
+<p align="center">
+  <a href="https://www.learnwithjason.dev">
+    <img src="https://res.cloudinary.com/jlengstorf/image/upload/q_auto,f_auto,w_240/lwj/learn-with-jason.png" alt="Learn With Jason" width="120" />
+  </a>
+</p>
+<h1 align="center">
+  Make WordPress Unhackable with Decoupling
+</h1>
+<h3 align="center">
+  Avoid bot attacks and other hacking attempts on your WordPress site by decoupling the public site from your WP admin. 
+</h3>
+<p align="center">
+  But don’t worry! You can still: 
+  <a href="https://youtu.be/fWxn-r83ygQ"><strong>watch the video</strong></a> · 
+  <a href="https://celebrated-creponne-c229db.netlify.app/"><strong>see the demo</strong></a> · 
+  <a href="https://www.learnwithjason.dev/"><strong>see more from Jason</strong></a>
+</p>
 
-```
-npm create astro@latest -- --template minimal
-```
+&nbsp;
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
+If the public site has no connection to the admin console, you can power the WordPress site down entirely after builds — no way to hack a site that isn’t running at all!
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This demo uses [Astro](https://astro.build) for the public site and builds from a locally running WordPress install powered by [Local](https://localwp.com). The frontend is hosted on [Netlify](https://netlify.com), who sponsored this demo and video.
 
-## 🚀 Project Structure
+&nbsp;
 
-Inside of your Astro project, you'll see the following folders and files:
+## More Information
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [Watch the video of this site being built](https://youtu.be/fWxn-r83ygQ)
+- [Subscribe to _Learn With Jason_ on YouTube](https://youtube.com/@learnwithjason) to watch future episodes live
